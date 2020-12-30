@@ -32,7 +32,7 @@ class HomePage extends React.Component {
                     </motion.div>
                     |
                 </Presentation>
-                <SkillList animate={{opacity:1}} initial={{opacity:0}} transition={{duration: 2 }}>React+Redux&nbsp;●&nbsp;Express.js&nbsp;●&nbsp;NodeJs</SkillList>
+                <SkillList animate={{opacity:1}} initial={{opacity:0}} transition={{duration: 2 }}>React+Redux&nbsp;●&nbsp;Vue+Vuex&nbsp;●&nbsp;NodeJs</SkillList>
             </Container>
         )
     }

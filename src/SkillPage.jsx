@@ -34,7 +34,7 @@ class SkillPage extends React.Component {
                 </SkillTitle>
                 <SkillShortDesc>
                     <div style={{textAlign: 'center'}}>
-                        NodeJs, Express.js, Framework React+Redux+Router, Html&Css, Js/Jquery, Bootstrap, PHP, Java, Python, C++, C.
+                        <strong>NodeJs</strong>, <strong>Express.js</strong>,Koa.js, Framework <strong>React+Redux+Router</strong>,Framework <strong>Vue+Vuex+Router</strong>, <strong>Webpack</strong>, Html&Css, Js/Jquery, Bootstrap, PHP, Java, Python, C++, C.
                     </div>
                     <div>
                         Eager to learn new technology and work in team.
@@ -124,7 +124,7 @@ class SkillPage extends React.Component {
                             ></motion.path>
                         </motion.svg>
                         <SkillName>
-                            HTML+CSS
+                            Vue+Vuex+Router
                         </SkillName>
                     </SkillPaintItem>
                 </SkillPaint>
