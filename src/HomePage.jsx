@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import backImage from './img/back2.jpg';
 import { motion } from 'framer-motion';
 import { connect } from 'react-redux';
-import { setActiveItem } from './store/actionCreator'
+import { setActiveItem } from './store/actionCreator';
+import Typed from 'typed.js';
 
 const flag = {
   visible: { opacity: 1, x: 0 },
@@ -13,6 +14,21 @@ const flag = {
 class HomePage extends React.Component {
     componentDidMount(){
         this.props.setActiveItem('Home')
+
+        const strings = [
+          'A Front-end Developper',
+          'A Fullstack Developper',
+          'An University Student'
+        ]
+        // You can pass other options here, such as typing speed, back speed, etc.
+        const options = {
+            strings: strings,
+            loop: true,
+            typeSpeed: 70,
+            backSpeed: 30
+        };
+        // this.el refers to the <span> in the render() method
+        this.typed = new Typed(this.el, options);
     }
     
     render() {
@@ -27,10 +43,10 @@ class HomePage extends React.Component {
                 <HelloText animate={{opacity:1}} initial={{opacity:0}} transition={{duration: 2 }}>Hello</HelloText>
                 <Presentation>
                     I Am&nbsp;
-                    <motion.div  style={{overflow:'hidden', wordBreak:'break-all'}} animate={{width:'100%'}} initial={{width:'0%'}} transition={{duration: 3 ,repeat:'Infinity', repeatDelay: 0.5}}>
-                        A FullStack Developer. 
-                    </motion.div>
-                    |
+                    <span
+                        style={{ whiteSpace: 'pre' }}
+                        ref={(el) => { this.el = el; }}
+                    />
                 </Presentation>
                 <SkillList animate={{opacity:1}} initial={{opacity:0}} transition={{duration: 2 }}>React+Redux&nbsp;●&nbsp;Vue+Vuex&nbsp;●&nbsp;NodeJs</SkillList>
             </Container>
